@@ -49,11 +49,6 @@ Performing L4A<sub>base</sub> on Resnet50 pretrained by SimCLRv2.
 python attacks.py --mode l4a_base --model_name r50_1x_sk1 --model_arch simclr --data_path your_data_folder --target_layer 0 --save_path your_save_path
 ```
 
-Performing L4A<sub>fuse</sub> on Resnet101 pretrained by SimCLRv2. 
-```
-python attacks.py --mode l4a_fuse --model_name r101_1x_sk1 --model_arch simclr --data_path your_data_folder --target_layer1 0 --target_layer2 1 --lamuda 1 --save_path your_save_path
-```
-
 Performing L4A<sub>ugs</sub> on ViT-B pretrained by MAE.
 ```
 python attacks.py --mode l4a_ugs --model_name vit_base_patch16 --data_path your_data --mean_std uniform --mean_hi 0.6 --mean_lo 0.4 --std_hi 0.10 --std_lo 0.05 --lamuda 0.01 --save_path your_save_path
@@ -73,7 +68,7 @@ Testing PAPs on Resnet101
 python eval.py --model_name r50_1x_sk1 --model_arch simclr --uap_path your_pap_path
 ```
 
-## models
+## Fintuned models
 We provide several finetuned models on the shelf. Please check the following table.
 
 |  SimCLRv2   | SimCLRv2  | MAE |
@@ -81,9 +76,14 @@ We provide several finetuned models on the shelf. Please check the following tab
 | r50_1x_sk1  | r101_1x_sk1 | vit_base_patch16 |
 | [models]()  | [models]() | [models]() |
 
-We also provide several perturbations in the [perturbations](perturbations).
+We also provide several perturbations in the [perturbations folder](perturbations).
 
 ## Acknowledgements
 * This repo is based on the [SimCLRv2 repo](https://github.com/google-research/simclr), [SimCLRv2-Pytorch repo](https://github.com/Separius/SimCLRv2-Pytorch) and [MAE repo](https://github.com/facebookresearch/mae).
 
 * Thanks to [UAP repo](https://github.com/NetoPedro/Universal-Adversarial-Perturbations-Pytorch), [FFF repo](https://github.com/val-iisc/fast-feature-fool). We steal many lines of code from them.
+
+## Contact
+banyh2000 at gmail.com  
+dongyinpeng at gmail.com
+Any discussions, suggestions and questions are welcome!
