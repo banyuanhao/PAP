@@ -6,7 +6,6 @@ from datasetplus.DTD import DTD
 from datasetplus.pets import OxfordIIITPet
 from datasetplus.FGVC import FGVCAircraft
 from datasetplus.cub2011 import Cub2011
-import os
 
 
 class Dataset:
@@ -48,7 +47,6 @@ class Dataset:
                                                           transform= self.Transform_without_aug() ),
                           'cars': lambda: StanfordCars(self.root_folder, split='val',
                                                        transform=self.Transform_without_aug()),
-                          'imagenet':lambda: datasets.ImageFolder(self.root_folder,),
                           'DTD': lambda: DTD(self.root_folder, split='val',
                                                       transform=self.Transform_without_aug()),
                           'svhn': lambda: datasets.SVHN(root=self.root_folder, split='val',

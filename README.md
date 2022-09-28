@@ -40,12 +40,9 @@ To finetune models on downstream datasets, please follow this [repo](finetuning/
 Please configure the paths of pre-trained and finetuned models in [tools.py](tools.py).
 
 
-
-
-
-## Attacking
-We provide the testing code of sereval baselines [STD](https://openaccess.thecvf.com/content_CVPR_2020/papers/Lu_Enhancing_Cross-Task_Black-Box_Transferability_of_Adversarial_Examples_With_Dispersion_Reduction_CVPR_2020_paper.pdf), [SSP](https://arxiv.org/abs/2006.04924), [FFF](https://arxiv.org/abs/1707.05572), [UAP](https://arxiv.org/abs/1610.08401), [UAPEPGD](https://ieeexplore.ieee.org/abstract/document/9191288/).
-We omit [ASV](https://arxiv.org/abs/1709.03582) bacause it can hardly be integrated into the framework. Anyone interested in it may download the official code and have a try. 
+### Attacking
+We provide the testing code of sereval baselines [STD](https://openaccess.thecvf.com/content_CVPR_2020/papers/Lu_Enhancing_Cross-Task_Black-Box_Transferability_of_Adversarial_Examples_With_Dispersion_Reduction_CVPR_2020_paper.pdf), [SSP](https://arxiv.org/abs/2006.04924), [FFF](https://arxiv.org/abs/1707.05572), [UAP](https://arxiv.org/abs/1610.08401), [UAPEPGD](https://ieeexplore.ieee.org/abstract/document/9191288/). 
+We omit [ASV](https://arxiv.org/abs/1709.03582) bacause it can hardly be integrated into the framework. Anyone interested in it may download the official code and have a try.
 
 Performing L4A<sub>base</sub> on Resnet50 pretrained by SimCLRv2. 
 ```
@@ -70,7 +67,7 @@ python attacks.py --mode ssp --model_name r50_1x_sk1 --model_arch simclr --data_
 Note: if you want to perform UAP or UAPEPGD on MAE models, you have to obtain models that linearprobes on the Imagenet.
 Please refer to the [MAE repo](https://github.com/facebookresearch/mae).
 
-## Evaluating
+### Evaluating
 Testing PAPs on Resnet101
 ```
 python eval.py --model_name r50_1x_sk1 --model_arch simclr --uap_path your_pap_path
@@ -84,7 +81,9 @@ We provide several finetuned models on the shelf. Please check the following tab
 | r50_1x_sk1  | r101_1x_sk1 | vit_base_patch16 |
 | [models]()  | [models]() | [models]() |
 
+We also provide several perturbations in the [perturbations](perturbations).
+
 ## Acknowledgements
 * This repo is based on the [SimCLRv2 repo](https://github.com/google-research/simclr), [SimCLRv2-Pytorch repo](https://github.com/Separius/SimCLRv2-Pytorch) and [MAE repo](https://github.com/facebookresearch/mae).
 
-* We use many parts of [UAP repo](https://github.com/NetoPedro/Universal-Adversarial-Perturbations-Pytorch), [FFF repo](https://github.com/val-iisc/fast-feature-fool). Thanks a lot.
+* Thanks to [UAP repo](https://github.com/NetoPedro/Universal-Adversarial-Perturbations-Pytorch), [FFF repo](https://github.com/val-iisc/fast-feature-fool). We steal many lines of code from them.
