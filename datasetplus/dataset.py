@@ -6,6 +6,7 @@ from datasetplus.DTD import DTD
 from datasetplus.pets import OxfordIIITPet
 from datasetplus.FGVC import FGVCAircraft
 from datasetplus.cub2011 import Cub2011
+import os
 
 
 class Dataset:
@@ -21,7 +22,7 @@ class Dataset:
                                                           transform=self.Transform_with_aug() if date_aug else self.Transform_without_aug()),
                           'caltech101': lambda : datasets.Caltech101(self.root_folder,
                                                           transform=self.Transform_with_aug() if date_aug else self.Transform_without_aug()),
-                          'imagenet':lambda: datasets.ImageFolder(root='~/../../data/yangdingcheng/ILSVRC2012/train', transform=self.Transform_with_aug() if date_aug else self.Transform_without_aug()),
+                          'imagenet':lambda: datasets.Imagenet(root=self.root_folder,split='train', transform=self.Transform_with_aug() if date_aug else self.Transform_without_aug()),
                           'food': lambda : Food101(self.root_folder,split='train',
                                                           transform=self.Transform_with_aug() if date_aug else self.Transform_without_aug()),
                           'cars': lambda: StanfordCars(self.root_folder, split='train',
@@ -65,7 +66,7 @@ class Dataset:
                                                           transform= self.Transform_without_aug()),
                           'cifar100': lambda: datasets.CIFAR100(self.root_folder,  train=False,
                                                                 transform=self.Transform_without_aug()),
-                          'imagenet':lambda: datasets.ImageFolder(self.root_folder,
+                          'imagenet':lambda: datasets.ImageNet(self.root_folder,split='test',
                                                                transform=self.Transform_with_aug() if date_aug else self.Transform_without_aug(),),
                           'food': lambda: Food101(self.root_folder, split='test',
                                                   transform=self.Transform_without_aug()),

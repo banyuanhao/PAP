@@ -13,7 +13,7 @@ parser = argparse.ArgumentParser(description='PAP training')
 
 # dataset
 parser.add_argument('--batch_size', type=int, default=16)
-parser.add_argument('--data_path', type=str, default='/data/yangdingcheng/ILSVRC2012/train')
+parser.add_argument('--data_path', type=str, default='/data/yuanhao.ban/PAP')
 parser.add_argument('--workers', type=int, default=8)
 
 # model

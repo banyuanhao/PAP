@@ -33,7 +33,7 @@ def get_fooling_rate(delta, dataset_name, args):
 
     model.to(device).eval()
 
-    _dataset = Dataset('/data/yuanhao.ban/PAP')
+    _dataset = Dataset(args.data_path)
     dataset = _dataset.get_test_dataset(dataset_name)
     dataloader = DataLoader(dataset, num_workers=4, shuffle=True, batch_size=args.batch_size, pin_memory=True)
 
@@ -58,7 +58,7 @@ def get_fooling_rate_imagenet(model_name, delta, args):
     device = args.device
     model = get_pretrained_imagenet_simclr(model_name)
 
-    dataset = Dataset('/data/yuanhao.ban/val')
+    dataset = Dataset(args.data_path)
     testing_dataset = dataset.get_test_dataset('imagenet')
     test_loader = DataLoader(
         testing_dataset, batch_size=256, shuffle=True,
