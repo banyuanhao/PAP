@@ -1,3 +1,5 @@
+# stealing from https://github.com/NetoPedro/Universal-Adversarial-Perturbations-Pytorch
+
 import torch
 from datasetplus.dataset import Dataset
 from torch.utils.data import DataLoader

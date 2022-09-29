@@ -37,6 +37,7 @@ def L4A_base(model,args):
             activations.append(torch.square(output))
             return None
 
+        #get the feature maps
         if args.model_arch == 'simclr':
             handle = model.net[args.target_layer].register_forward_hook(activation_recorder_hook)
             remove_handles.append(handle)

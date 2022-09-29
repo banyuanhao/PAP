@@ -43,6 +43,7 @@ def L4A_ugs(model, args):
             activations.append(torch.square(output))
             return None
         
+        #get the feature maps
         if args.model_arch == 'simclr':
             handle = model.net[args.target_layer].register_forward_hook(activation_recorder_hook)
             remove_handles.append(handle)
@@ -72,6 +73,7 @@ def L4A_ugs(model, args):
         dataplus.requires_grad = False
         image = image.to(device)
         
+        # fusing the pretrianed images and the gaussian noise
         data = torch.cat((dataplus,image),dim=0)
         
         model(data + delta)

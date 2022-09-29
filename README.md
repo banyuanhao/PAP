@@ -20,6 +20,7 @@ Clone this repo: ```git clone https://github.com/banyuanhao/PAP.git```
 
 ### Enviroment setup
 ```
+python 3.8
 Pytorch 1.8.1
 Torchvision
 tqdm
@@ -28,7 +29,7 @@ timm 0.3.2
 
 ### Datasets
 Please download the [Imagenet](https://image-net.org/index.php), [CARS](https://ai.stanford.edu/~jkrause/cars/car_dataset.html), [PETS](https://www.robots.ox.ac.uk/~vgg/data/pets/), [FOOD](https://data.vision.ee.ethz.ch/cvl/datasets_extra/food-101/), [DTD](https://www.robots.ox.ac.uk/~vgg/data/dtd/), [CIFAR10](https://www.cs.toronto.edu/~kriz/cifar.html), [CIFAR100](https://www.cs.toronto.edu/~kriz/cifar.html), [FGVC](https://www.robots.ox.ac.uk/~vgg/data/fgvc-aircraft/), [CUB](http://www.vision.caltech.edu/visipedia/CUB-200-2011.html), [SVHN](http://ufldl.stanford.edu/housenumbers/), [STL10](https://cs.stanford.edu/~acoates/stl10/) datasets and put them in a folder. 
-Please use ***--data_path*** to configure the dataset path.
+Please use ***--data_path*** to configure it.
 
 ### Models
 The repo needs the pre-trained models and the fine-tuned ones.
@@ -84,6 +85,9 @@ We also provide several perturbations in the [perturbations folder](perturbation
 * Thanks to [UAP repo](https://github.com/NetoPedro/Universal-Adversarial-Perturbations-Pytorch), [FFF repo](https://github.com/val-iisc/fast-feature-fool). We steal many lines of code from them.
 
 ## Contact
+```
 banyh2000 at gmail.com  
 dongyinpeng at gmail.com
+```
+
 Any discussions, suggestions and questions are welcome!

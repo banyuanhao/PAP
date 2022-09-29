@@ -23,11 +23,11 @@ parser.add_argument('--model_name', type=str, default=['r50_1x_sk1','r101_1x_sk1
 
 # basic config
 parser.add_argument('--mode', type=str,choices=['fff','std','uap','uapepgd','ssp','L4A_base','L4A_fuse','L4A_ugs'])
-parser.add_argument('--bound', type= float,default=0.05)
+parser.add_argument('--bound', type = float, default=0.05)
 parser.add_argument('--disable_tqdm', action='store_true')                                                      
 parser.add_argument('--save_every_iter',type=int,default=1000)
 parser.add_argument('--save_path',type=str)
-parser.add_argument('--alpha',type=float,default=0.0002)
+parser.add_argument('--alpha', type=float, default=0.0002, help='step size')
 
 #fff
 parser.add_argument('--prior_type', choices=['no_data', 'mean_std', 'one_sample'],
