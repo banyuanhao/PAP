@@ -17,7 +17,7 @@ parser.add_argument('--model_name',type=str)
 parser.add_argument('--model_arch',type=str)
 parser.add_argument('--data_path',type=str,default='/data/yuanhao.ban/PAP')
 
-
+ww
 def get_fooling_rate(delta, dataset_name, args):
 
     device = args.device
