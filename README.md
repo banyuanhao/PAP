@@ -7,6 +7,17 @@ This repository contains the code for Pre-trained Adversarial Perturbations intr
 ## Citation
 If you find this paper useful in your research, please consider citing:
 
+```
+@inproceedings{
+ban2022pretrained,
+title={Pre-trained Adversarial Perturbations},
+author={Yuanhao Ban and Yinpeng Dong},
+booktitle={Thirty-Sixth Conference on Neural Information Processing Systems},
+year={2022},
+url={https://openreview.net/forum?id=ZLcwSgV-WKH}
+}
+```
+
 
 ## Introduction
 In this paper, we delve into the robustness of pre-trained models by introducing Pre-trained Adversarial Perturbations (PAPs), which are universal perturbations crafted for the pre-trained models to maintain the effectiveness when attacking fine-tuned ones without any knowledge of the downstream tasks. 
@@ -77,8 +88,8 @@ We provide several finetuned models on the shelf. Please check the following tab
 | r50_1x_sk1  | r101_1x_sk1 | vit_base_patch16 |
 | [models]()  | [models]() | [models]() |
 
-Due to the size of the fine-tuned models, we do not upload to the cloud.
-If you feel interested in them, please email me at **banyh2000 at gmail.com** and I will send you a copy. 
+Due to the size of the fine-tuned models, we do not upload them to the cloud.
+If you feel interested in them, please email me at **banyh2000 at gmail.com**, and I will send you a copy. 
 
 We also provide several perturbations in the [perturbations folder](perturbations).
 
