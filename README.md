@@ -86,9 +86,8 @@ We provide several finetuned models on the shelf. Please check the following tab
 |  SimCLRv2   | SimCLRv2  | MAE |
 |  ----  | ----  | ----  |
 | r50_1x_sk1  | r101_1x_sk1 | vit_base_patch16 |
-| [models]()  | [models]() | [models]() |
 
-Due to the size of the fine-tuned models, we do not upload them to the cloud.
+Due to the size of the fine-tuned models, we do not upload them to the cloud. Please download the models from the [link](https://cloud.tsinghua.edu.cn/d/796d38871dee46178c8b/).
 If you feel interested in them, please email me at **banyh2000 at gmail.com**, and I will send you a copy. 
 
 We also provide several perturbations in the [perturbations folder](perturbations).
